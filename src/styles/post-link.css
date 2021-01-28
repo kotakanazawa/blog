@@ -1,0 +1,22 @@
+.post-link {
+  margin: 10px 0px;
+}
+
+.post-link-text {
+  padding: 0.8rem;
+}
+
+.post-link-date {
+  color: #595959;
+}
+
+@media screen and (max-width: 575px) {
+  .post-link {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+}
+
+@media screen and (min-width: 576px) {
+}
