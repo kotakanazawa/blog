@@ -4,7 +4,7 @@ import "../styles/header.css"
 
 export default function Header() {
   return (
-    <header>
+    <header className="header">
       <Link to="/">
         HOME
       </Link>
