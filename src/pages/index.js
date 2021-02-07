@@ -13,8 +13,6 @@ export default function Home({ data }) {
           </li>
         ))}
       </ul>
-      <PostLink />
-      <PostLink />
     </Layout>
   )
 }
