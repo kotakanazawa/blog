@@ -9,12 +9,10 @@ export default function Home({ data }) {
       <ul>
         {data.allMicrocmsBlog.edges.map(({ node }) => (
           <li key={node.blogId}>
-            <Link to={`/blog/${node.blogId}`}>{node.title}</Link>
+            <Link to={`/${node.slug}`}>{node.title}</Link>
           </li>
         ))}
       </ul>
-      <PostLink />
-      <PostLink />
     </Layout>
   )
 }
