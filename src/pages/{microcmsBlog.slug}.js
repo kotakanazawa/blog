@@ -9,6 +9,7 @@ const BlogPage = ({ data }) => (
   <Layout>
     {/* TODO: <SEO title={data.microcmsBlog.title} /> */}
     <h1>{data.microcmsBlog.title}</h1>
+    <span>{data.microcmsBlog.publishedAt}</span>
     <div
       dangerouslySetInnerHTML={{
         __html: `${data.microcmsBlog.body}`,
@@ -26,6 +27,7 @@ export const query = graphql`
       title
       body
       slug
+      publishedAt
     }
   }
 `
