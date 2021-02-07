@@ -1,0 +1,35 @@
+.post-link {
+  margin: 5px 0px;
+}
+
+.post-link-body {
+  text-overflow: ellipsis;
+  overflow-wrap: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  color: #434343;
+}
+
+.post-link-title {
+}
+
+.post-link-date {
+  color: #595959;
+  margin-top: -10px;
+  padding-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 575px) {
+  .post-link {
+    /* border: #434343 1px solid; */
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .post-link {
+    /* border: #434343 1px solid; */
+  }
+}
