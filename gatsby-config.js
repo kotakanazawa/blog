@@ -4,9 +4,15 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: "Hope Invites",
+    title: "Just do IT",
     description: "Kota Kanazawa's dev blog",
-    author: "Kota Kanazawa"
+    author: "Kota Kanazawa",
+    // TODO: src直下じゃないほうがいいかも. static下にしたほうがいいかも
+    image: "./src/images/face.jpg",
+    // TODO: ドメイン取る
+    url: `localhost:8000`,
+    twitter: `KanazawaKoh`,
+    github: `kotakanazawa`,
   },
   plugins: [
     {
