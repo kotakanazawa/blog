@@ -6,7 +6,10 @@ import SEO from "../components/seo"
 
 const BlogPage = ({ data }) => (
   <Layout>
-    <SEO title={data.microcmsBlog.title} />
+    <SEO
+      title={data.microcmsBlog.title}
+      description={data.microcmsBlog.description}
+    />
     <h1>{data.microcmsBlog.title}</h1>
     <span>{data.microcmsBlog.publishedAt}</span>
     <div
@@ -23,6 +26,7 @@ export const query = graphql`
   query($id: String!) {
     microcmsBlog(id: { eq: $id }) {
       blogId
+      description
       title
       body
       slug
