@@ -16,6 +16,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
+    "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-source-microcms": "^1.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

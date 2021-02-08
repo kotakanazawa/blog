@@ -1,40 +1,25 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import { graphql, useStaticQuery } from "gatsby"
 
-const SEO = ({ title, description }) => {
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          description
+          title
+          lang
+        }
+      }
+    }
+  `)
+
   return (
-    <Helmet
-      htmlAttributes={{ lang: "ja-jp" }}
-      title={title}
-      titleTemplate={`%s`}
-      meta={[
-        {
-          name: `description`,
-          content: description,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: description,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:site_name`,
-          content: `Dev Blog`,
-        },
-        {
-          property: `og:locale`,
-          content: `ja_JP`,
-        },
-      ]}
-    />
+    <Helmet>
+      <html lang={data.site.siteMetadata.lang} />
+      <title>{data.site.siteMetadata.title}</title>
+      <meta name= "description" content={data.site.siteMetadata.description} />
+    </Helmet>
   )
 }
-
-export default SEO
