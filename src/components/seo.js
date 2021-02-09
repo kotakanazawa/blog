@@ -15,7 +15,9 @@ export default props => {
     }
   `)
 
-  const title = props.title || data.site.siteMetadata.title
+  const title = props.title
+    ? `${props.title} | ${data.site.siteMetadata.title}`
+    : data.site.siteMetadata.title
   const description = props.description || data.site.siteMetadata.description
 
   return (
