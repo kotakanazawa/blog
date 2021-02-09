@@ -9,6 +9,7 @@ const BlogPage = ({ data }) => (
     <SEO
       title={data.microcmsBlog.title}
       description={data.microcmsBlog.description}
+      slug={data.microcmsBlog.slug}
     />
     <h1>{data.microcmsBlog.title}</h1>
     <span>{data.microcmsBlog.publishedAt}</span>
