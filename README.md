@@ -1,1 +1,3 @@
-kusakusa test
+building my blog right now...
+
+- 草が生えるかどうかのテスト

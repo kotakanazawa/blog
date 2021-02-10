@@ -4,9 +4,16 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: "Hope Invites",
-    description: "Kota Kanazawa's dev blog",
-    author: "Kota Kanazawa"
+    title: `Just do IT`,
+    description: `Kota Kanazawa's dev blog`,
+    author: `Kota Kanazawa`,
+    // TODO: src直下じゃないほうがいいかも. static下にしたほうがいいかも
+    image: "./src/images/face.jpg",
+    lang: `ja`,
+    // TODO: ドメイン取る
+    url: `localhost:8000`,
+    twitter: `KanazawaKoh`,
+    github: `kotakanazawa`,
   },
   plugins: [
     {
@@ -21,5 +28,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-react-helmet`
   ],
 }

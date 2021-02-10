@@ -2,12 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-// TODO: SEO設定
-// import SEO from "../../components/seo"
+import SEO from "../components/seo"
 
 const BlogPage = ({ data }) => (
   <Layout>
-    {/* TODO: <SEO title={data.microcmsBlog.title} /> */}
+    <SEO
+      title={data.microcmsBlog.title}
+      description={data.microcmsBlog.description}
+      slug={data.microcmsBlog.slug}
+    />
     <h1>{data.microcmsBlog.title}</h1>
     <span>{data.microcmsBlog.publishedAt}</span>
     <div
@@ -24,6 +27,7 @@ export const query = graphql`
   query($id: String!) {
     microcmsBlog(id: { eq: $id }) {
       blogId
+      description
       title
       body
       slug
