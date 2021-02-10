@@ -22,8 +22,8 @@ export default props => {
 
   const description = props.description || data.site.siteMetadata.description
 
-  const url = props.slug
-    ? `${data.site.siteMetadata.url}/${props.slug}`
+  const url = props.pagepath
+    ? `${data.site.siteMetadata.url}${props.pagepath}`
     : data.site.siteMetadata.url
 
   return (

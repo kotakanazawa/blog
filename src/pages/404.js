@@ -1,7 +1,15 @@
 import React from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-export default () => {
+export default ({ location }) => {
   return (
-    <h2>お探しのページが見つかりませんでした。ごめんなさい。</h2>
+    <Layout>
+      <SEO
+        title="ページが見つかりません(404エラー)"
+        pagepath={location.pathname}
+      />
+      <h1 style={{ padding: `20vh 0`, textAlign: `center` }}>お探しのページが見つかりませんでした。ごめんなさい。</h1>
+    </Layout>
   )
 }
