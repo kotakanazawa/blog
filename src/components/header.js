@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import "../styles/header.css"
 
 export default () => {
@@ -14,8 +14,8 @@ export default () => {
   `)
 
   return (
-  <header className="header">
-    {data.site.siteMetadata.title}
-  </header>
+    <header className="header">
+      <Link to={`/`}>{data.site.siteMetadata.title}</Link>
+    </header>
   )
 }
