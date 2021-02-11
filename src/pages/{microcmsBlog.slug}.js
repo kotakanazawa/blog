@@ -30,7 +30,7 @@ export const query = graphql`
       title
       body
       slug
-      publishedAt
+      publishedAt(formatString: "YYYY年MM月DD日")
     }
   }
 `
