@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BIO from "../components/bio"
 
 const BlogPage = ({ data, location }) => (
   <Layout>
@@ -17,6 +18,7 @@ const BlogPage = ({ data, location }) => (
         __html: `${data.microcmsBlog.body}`,
       }}
     />
+    <BIO />
   </Layout>
 )
 

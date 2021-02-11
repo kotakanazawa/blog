@@ -7,7 +7,6 @@ module.exports = {
     title: `Just do IT`,
     description: `Kota Kanazawa's dev blog`,
     author: `Kota Kanazawa`,
-    // TODO: src直下じゃないほうがいいかも. static下にしたほうがいいかも
     image: "./src/images/face.jpg",
     locale: `ja_JP`,
     // TODO: ドメイン取る
