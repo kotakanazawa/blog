@@ -9,7 +9,7 @@ module.exports = {
     author: `Kota Kanazawa`,
     // TODO: src直下じゃないほうがいいかも. static下にしたほうがいいかも
     image: "./src/images/face.jpg",
-    lang: `ja`,
+    locale: `ja_JP`,
     // TODO: ドメイン取る
     siteUrl: `https://blog-one-alpha.vercel.app/`,
     twitter: `KanazawaKoh`,
