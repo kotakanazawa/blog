@@ -11,7 +11,7 @@ module.exports = {
     image: "./src/images/face.jpg",
     lang: `ja`,
     // TODO: ドメイン取る
-    url: `https://blog-one-alpha.vercel.app/`,
+    siteUrl: `https://blog-one-alpha.vercel.app/`,
     twitter: `KanazawaKoh`,
     github: `kotakanazawa`,
   },
