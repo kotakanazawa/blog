@@ -9,8 +9,8 @@ export default props => {
         siteMetadata {
           description
           title
+          siteUrl
           locale
-          url
         }
       }
     }
@@ -23,8 +23,8 @@ export default props => {
   const description = props.description || data.site.siteMetadata.description
 
   const url = props.pagepath
-    ? `${data.site.siteMetadata.url}${props.pagepath}`
-    : data.site.siteMetadata.url
+    ? `${data.site.siteMetadata.siteUrl}${props.pagepath}`
+    : data.site.siteMetadata.siteUrl
 
   return (
     <Helmet>

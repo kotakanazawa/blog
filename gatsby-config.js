@@ -11,7 +11,7 @@ module.exports = {
     image: "./src/images/face.jpg",
     locale: `ja_JP`,
     // TODO: ドメイン取る
-    url: `localhost:8000`,
+    siteUrl: `https://blog-one-alpha.vercel.app/`,
     twitter: `KanazawaKoh`,
     github: `kotakanazawa`,
   },
@@ -28,6 +28,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ],
 }
