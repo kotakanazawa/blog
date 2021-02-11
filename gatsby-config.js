@@ -1,6 +1,6 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
-});
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -16,6 +16,15 @@ module.exports = {
     github: `kotakanazawa`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: "gatsby-source-microcms",
       options: {
