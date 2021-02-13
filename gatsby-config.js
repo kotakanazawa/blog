@@ -1,13 +1,12 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
-});
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
     title: `Just do IT`,
     description: `Kota Kanazawa's dev blog`,
     author: `Kota Kanazawa`,
-    // TODO: src直下じゃないほうがいいかも. static下にしたほうがいいかも
     image: "./src/images/face.jpg",
     locale: `ja_JP`,
     // TODO: ドメイン取る
@@ -16,6 +15,15 @@ module.exports = {
     github: `kotakanazawa`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: "gatsby-source-microcms",
       options: {
