@@ -10,7 +10,7 @@ module.exports = {
     image: "./src/images/face.jpg",
     locale: `ja_JP`,
     // TODO: ドメイン取る
-    siteUrl: `https://kota-kanazawa.work/`,
+    siteUrl: `https://kanazawa.website/`,
     twitter: `KanazawaKoh`,
     github: `kotakanazawa`,
   },
