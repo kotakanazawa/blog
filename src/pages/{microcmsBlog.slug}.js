@@ -3,8 +3,20 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BIO from "../components/bio"
+import cheerio from "cheerio"
+import hljs from "highlight.js"
+import 'highlight.js/styles/dracula.css'
 
 const BlogPage = ({ data, location }) => {
+
+  const $ = cheerio.load(data.microcmsBlog.body)
+  $("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text())
+    $(elm).html(result.value)
+    $(elm).addClass("hljs")
+  })
+  const html = $.html()
+
   return (
     <Layout>
       <SEO
@@ -16,7 +28,7 @@ const BlogPage = ({ data, location }) => {
       <span>{data.microcmsBlog.publishedAt}</span>
       <div
         dangerouslySetInnerHTML={{
-          __html: `${data.microcmsBlog.body}`,
+          __html: html,
         }}
       />
       <BIO />

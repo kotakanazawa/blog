@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
     "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
@@ -23,6 +24,7 @@
     "gatsby-source-filesystem": "^2.11.0",
     "gatsby-source-microcms": "^1.0.1",
     "gatsby-transformer-sharp": "^2.12.0",
+    "highlight.js": "^10.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0"
