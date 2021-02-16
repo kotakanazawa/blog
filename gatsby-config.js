@@ -9,7 +9,7 @@ module.exports = {
     author: `Kota Kanazawa`,
     image: "./src/images/face.jpg",
     locale: `ja_JP`,
-    siteUrl: `https://blog-one-alpha.vercel.app/`,
+    siteUrl: `https://kanazawa.website/`,
     twitter: `KanazawaKoh`,
     github: `kotakanazawa`,
   },
