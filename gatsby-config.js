@@ -9,7 +9,6 @@ module.exports = {
     author: `Kota Kanazawa`,
     image: "./src/images/face.jpg",
     locale: `ja_JP`,
-    // TODO: ドメイン取る
     siteUrl: `https://kanazawa.website/`,
     twitter: `KanazawaKoh`,
     github: `kotakanazawa`,
