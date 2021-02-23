@@ -7,13 +7,14 @@ export default function Home({ data }) {
   return (
     <Layout>
       <SEO title="Just do IT" description="Kota Kanazawa's Dev Blog" />
-      <ul>
+      <div className="post-block">
         {data.allMicrocmsBlog.edges.map(({ node }) => (
-          <li key={node.blogId}>
+          <div key={node.blogId} className="post-block__title">
             <Link to={`/${node.slug}`}>{node.title}</Link>
-          </li>
+            <p className="post-block__publishedAt">{node.publishedAt}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </Layout>
   )
 }
@@ -27,7 +28,7 @@ export const query = graphql`
           title
           body
           slug
-          publishedAt
+          publishedAt(formatString: "YYYY年MM月DD日")
         }
       }
     }
