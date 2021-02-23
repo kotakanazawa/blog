@@ -5,10 +5,9 @@ import SEO from "../components/seo"
 import Bio from "../components/bio"
 import cheerio from "cheerio"
 import hljs from "highlight.js"
-import 'highlight.js/styles/dracula.css'
+import "highlight.js/styles/agate.css"
 
 const BlogPage = ({ data, location }) => {
-
   const $ = cheerio.load(data.microcmsBlog.body)
   $("pre code").each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text())
