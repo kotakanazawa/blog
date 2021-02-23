@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BIO from "../components/bio"
+import Bio from "../components/bio"
 import cheerio from "cheerio"
 import hljs from "highlight.js"
 import 'highlight.js/styles/dracula.css'
@@ -31,7 +31,7 @@ const BlogPage = ({ data, location }) => {
           __html: html,
         }}
       />
-      <BIO />
+      <Bio />
     </Layout>
   )
 }

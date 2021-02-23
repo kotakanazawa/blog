@@ -14,6 +14,15 @@ module.exports = {
     github: `kotakanazawa`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        head: true,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -35,7 +44,5 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
   ],
 }
