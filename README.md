@@ -1,3 +1,3 @@
 building my blog right now...
 
-- 草が生えるかどうかのテスト
+GitHubのPRレビューコメントの方法知るための変更
