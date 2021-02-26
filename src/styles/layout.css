@@ -21,8 +21,6 @@ body {
   font-size: 1rem;
 }
 
-
-
 .layout {
   margin: 0 auto;
   max-width: 620px;
@@ -35,4 +33,8 @@ body {
 
 .layout img {
   width: 100%;
+}
+
+.hljs {
+  font-size: 1.1rem;
 }
