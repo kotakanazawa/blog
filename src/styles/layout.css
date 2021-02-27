@@ -36,5 +36,31 @@ body {
 }
 
 .hljs {
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+/* TODO: base.cssなどへ移動 */
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em;
+  color: #444;
+  background-color: #e7edf3;
+  border-radius: 3px;
+  border: solid 1px #d6dde4;
+}
+
+/* TODO: base.cssなどへ移動 */
+iframe {
+  width: 100%;
+}
+
+/* TODO: base.cssなどへ移動 */
+figure, blockquote {
+  margin: 0;
+}
+blockquote {
+  color: #727171;
+  padding: 0 0 0 0.5em;
+  border-left: solid 3px black;
+  font-style: italic;
 }
