@@ -1,3 +1,2 @@
-building my blog right now...
+Gatsby.js + Vercel + microCMSで作ったブログ。
 
-- 草が生えるかどうかのテスト
