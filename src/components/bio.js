@@ -14,7 +14,6 @@ export default () => {
 
   return (
     <div className="bio">
-      {/* TODO: 画像と軽い自己紹介作成 */}
       <span>written by {data.site.siteMetadata.author}</span>
     </div>
   )
