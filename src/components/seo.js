@@ -40,6 +40,8 @@ export default props => {
       <meta property="og:type" content="website" />
       <meta property="og:locale" content={data.site.siteMetadata.locale} />
       <meta property="og:image" content={data.site.siteMetadata.ogpImage} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content={data.site.siteMetadata.ogpImage} />
     </Helmet>
   )
 }
