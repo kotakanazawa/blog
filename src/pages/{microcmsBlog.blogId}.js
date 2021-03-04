@@ -46,7 +46,6 @@ export const query = graphql`
       blogId
       title
       body
-      slug
       publishedAt(formatString: "YYYY/MM/DD")
     }
   }
