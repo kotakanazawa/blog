@@ -11,7 +11,6 @@ export default props => {
           title
           siteUrl
           locale
-          ogpImage
         }
       }
     }
@@ -27,6 +26,8 @@ export default props => {
     ? `${data.site.siteMetadata.siteUrl}${props.pagepath}`
     : data.site.siteMetadata.siteUrl
 
+  const ogpUrl = `${data.site.siteMetadata.siteUrl}/ogp.jpg`
+
   return (
     <Helmet>
       <html lang={data.site.siteMetadata.locale} />
@@ -39,9 +40,9 @@ export default props => {
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content={data.site.siteMetadata.locale} />
-      <meta property="og:image" content={data.site.siteMetadata.ogpImage} />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:image" content={data.site.siteMetadata.ogpImage} />
+      <meta property="og:image" content={ogpUrl} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:image" content={ogpUrl} />
     </Helmet>
   )
 }
