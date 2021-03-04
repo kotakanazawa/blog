@@ -8,6 +8,7 @@ module.exports = {
     description: `Kota Kanazawa's dev blog`,
     author: `Kota Kanazawa`,
     image: "./src/images/face.jpg",
+    ogpImage: "./src/images/ogp.jpg",
     locale: `ja_JP`,
     siteUrl: `https://kanazawa.website/`,
     twitter: `KanazawaKoh`,
