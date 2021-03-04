@@ -8,6 +8,8 @@ import hljs from "highlight.js"
 import "highlight.js/styles/agate.css"
 
 const BlogPage = ({ data, location }) => {
+
+  // シンタックスハイライトをする
   const $ = cheerio.load(data.microcmsBlog.body)
   $("pre code").each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text())
@@ -41,7 +43,6 @@ export const query = graphql`
   query($id: String!) {
     microcmsBlog(id: { eq: $id }) {
       blogId
-      description
       title
       body
       slug
