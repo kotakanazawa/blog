@@ -11,6 +11,7 @@ export default props => {
           title
           siteUrl
           locale
+          ogpImage
         }
       }
     }
@@ -38,6 +39,7 @@ export default props => {
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content={data.site.siteMetadata.locale} />
+      <meta property="og:image" content={data.site.siteMetadata.ogpImage} />
     </Helmet>
   )
 }
