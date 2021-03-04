@@ -22,7 +22,8 @@ iframe {
   width: 100%;
 }
 
-figure, blockquote {
+figure,
+blockquote {
   margin: 0;
 }
 
@@ -50,6 +51,7 @@ blockquote {
   margin-top: -0.15rem;
   font-size: 0.8rem;
   color: #a5aaaf;
+  padding-top: 0.2rem;
 }
 
 .layout {
