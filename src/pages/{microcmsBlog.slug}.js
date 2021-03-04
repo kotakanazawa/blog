@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Bio from "../components/bio"
 import cheerio from "cheerio"
 import hljs from "highlight.js"
+import "../styles/post.css"
 import "highlight.js/styles/agate.css"
 
 const BlogPage = ({ data, location }) => {
@@ -26,7 +27,7 @@ const BlogPage = ({ data, location }) => {
         pagepath={location.pathname}
       />
       <h1>{data.microcmsBlog.title}</h1>
-      <span>{data.microcmsBlog.publishedAt}</span>
+      <span className="publishedAt">{data.microcmsBlog.publishedAt}</span>
       <div
         dangerouslySetInnerHTML={{
           __html: html,
@@ -46,7 +47,7 @@ export const query = graphql`
       title
       body
       slug
-      publishedAt(formatString: "YYYY年MM月DD日")
+      publishedAt(formatString: "YYYY/MM/DD")
     }
   }
 `
