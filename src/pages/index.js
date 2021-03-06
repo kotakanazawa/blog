@@ -11,7 +11,7 @@ export default function Home({ data }) {
         {data.allMicrocmsBlog.edges.map(({ node }) => (
           <div key={node.blogId} className="post-block__title">
             <Link to={`/${node.blogId}`}>{node.title}</Link>
-            <p className="post-block__publishedAt">{node.publishedAt}</p>
+            <p className="post-block__publishedAt">{node.createdAt}</p>
           </div>
         ))}
       </div>
@@ -21,13 +21,13 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    allMicrocmsBlog {
+    allMicrocmsBlog(sort: { order: DESC, fields: createdAt }) {
       edges {
         node {
           blogId
           title
           body
-          publishedAt(formatString: "YYYY/MM/DD")
+          createdAt(formatString: "YYYY/MM/DD")
         }
       }
     }
