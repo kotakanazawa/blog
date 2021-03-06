@@ -1,2 +1,2 @@
-Gatsby.js + Vercel + microCMSで作ったブログ。
+Gatsby.js + Vercel + microCMSで作ったブログです。
 
