@@ -1,14 +1,26 @@
+/* Base */
 html {
   font-size: 100%;
 }
 
 body {
-  font-family: "メイリオ", "Meiryo", "Hiragino Kaku Gothic ProN",
-    "ヒラギノ角ゴ ProN W3", "ＭＳ Ｐゴシック", "MS PGothic" "MS UI Gothic",
-    "Helvetica", "Arial", sans-serif;
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+    "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-/* Base */
+a {
+  color: #272343;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 code {
   display: inline-block;
   padding: 0.1em 0.25em;
@@ -64,6 +76,3 @@ blockquote {
   font-size: 1.5rem;
 }
 
-.layout img {
-  width: 100%;
-}
