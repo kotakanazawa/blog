@@ -11,7 +11,7 @@ export default function Home({ data }) {
         {data.allMicrocmsBlog.edges.map(({ node }) => (
           <div key={node.blogId} className="post-block__title">
             <Link to={`/${node.blogId}`}>{node.title}</Link>
-            <p className="post-block__publishedAt">{node.createdAt}</p>
+            <p className="post-block__publish-date">{node.createdAt}</p>
           </div>
         ))}
       </div>
