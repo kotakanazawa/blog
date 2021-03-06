@@ -18,7 +18,7 @@ a:hover {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 code {
@@ -68,11 +68,11 @@ blockquote {
 
 .layout {
   margin: 0 auto;
-  max-width: 620px;
+  max-width: 650px;
   padding: 0 0.3rem 2rem;
+  font-size: 1.1rem;
 }
 
 .layout h1 {
   font-size: 1.5rem;
 }
-
