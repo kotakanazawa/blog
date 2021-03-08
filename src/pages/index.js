@@ -9,8 +9,10 @@ export default function Home({ data }) {
       <SEO title="Just do IT" description="Kota Kanazawa's Dev Blog" />
       <div className="post-block">
         {data.allMicrocmsBlog.edges.map(({ node }) => (
-          <div key={node.blogId} className="post-block__title">
-            <Link to={`/${node.blogId}`}>{node.title}</Link>
+          <div key={node.blogId}>
+            <Link to={`/${node.blogId}`} className="post-block__title">
+              {node.title}
+            </Link>
             <p className="post-block__publish-date">{node.createdAt}</p>
           </div>
         ))}

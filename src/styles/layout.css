@@ -56,12 +56,13 @@ blockquote {
 }
 
 .post-block__title {
+  font-weight: bold;
   font-size: 1.3rem;
 }
 
 .post-block__publish-date {
   margin-top: -0.15rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #595959;
   padding-top: 0.2rem;
 }
