@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Link from "next/link";
-import { client } from "../libs/client";
+import Link from "next/link"
+import { client } from "../libs/client"
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Date from '../components/date'
@@ -31,14 +31,14 @@ export default function Home({ blogs }) {
         </ul>
       </section>
     </Layout>
-  );
+  )
 }
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blog" });
+  const data = await client.get({ endpoint: "blog" })
   return {
     props: {
       blogs: data.contents,
     },
-  };
-};
+  }
+}
