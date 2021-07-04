@@ -1,0 +1,10 @@
+.header {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header a {
+  text-decoration: none;
+}
