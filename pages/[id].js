@@ -2,6 +2,7 @@ import { client } from "../libs/client"
 import Layout from '../components/layout'
 import Head from 'next/head'
 import Date from '../components/date'
+import SEO from '../components/seo'
 import utilStyles from '../styles/utils.module.css'
 import cheerio from "cheerio"
 import hljs from "highlight.js"
@@ -19,9 +20,10 @@ export default function BlogId({ blog }) {
 
   return (
     <Layout>
-      <Head>
-        <title>{blog.title}</title>
-      </Head>
+      <SEO
+        title={blog.title}
+        description={blog.description}
+      />
       <article>
         <h1 className={utilStyles.headingXl}>{blog.title}</h1>
         <div className={utilStyles.lightText}>
