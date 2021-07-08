@@ -14,6 +14,7 @@ export default function SEO({ description, title }) {
     <Head>
       <title>{siteTitle}</title>
       <meta name="description" content={siteDescription} />
+      <link rel="icon" href="/favicon.ico" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDescription} />
