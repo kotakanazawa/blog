@@ -9,6 +9,6 @@ export default {
     github: "kotakanazawa",
   },
   image: {
-    ogp: './public/images/ogp.jpg'
+    ogp: 'https://kanazawa.website/public/images/ogp.jpg'
   }
 }
