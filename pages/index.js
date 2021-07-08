@@ -4,13 +4,12 @@ import { client } from "../libs/client"
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Date from '../components/date'
+import SEO from '../components/seo'
 
 export default function Home({ blogs }) {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+      <SEO />
       <section className={utilStyles.headingMd}>
         <p>夫&2児の父。Webアプリケーションエンジニアのブログです。Ruby, React, TypeScript, GraphQL, Next.jsなどに興味があります。</p>
       </section>
