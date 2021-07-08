@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Link from "next/link"
 import { client } from "../libs/client"
 import Layout, { siteTitle } from '../components/layout'
