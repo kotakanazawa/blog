@@ -18,7 +18,7 @@ export default function SEO({ description, title }) {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDescription} />
-      <meta property="og:image" content={config.image.ogp} />
+      <meta property="og:image" content="/public/images/ogp.jpg" />
       <meta property="og:site_name" content={config.title} />
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:creator" content={config.social.twitter} />
