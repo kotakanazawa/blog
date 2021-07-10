@@ -1,12 +1,11 @@
 import { client } from "../libs/client"
 import Layout from '../components/layout'
-import Head from 'next/head'
 import Date from '../components/date'
 import SEO from '../components/seo'
 import utilStyles from '../styles/utils.module.css'
 import cheerio from "cheerio"
 import hljs from "highlight.js"
-import "highlight.js/styles/agate.css"
+import "highlight.js/styles/a11y-dark.css"
 
 export default function BlogId({ blog }) {
 
@@ -32,7 +31,6 @@ export default function BlogId({ blog }) {
         <div
           dangerouslySetInnerHTML={{
             __html: html,
-            // __html: `${blog.body}`,
           }}
           />
       </article>
