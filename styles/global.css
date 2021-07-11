@@ -26,15 +26,17 @@ img {
   display: block;
 }
 
+/* インラインコード */
 code {
   display: inline-block;
-  margin-left: 0.25em;
-  padding: 0.1em 0.25em;
+  padding: 0 0.25em;
+  /* padding: 0.1em 0.25em; */
   color: #444;
   background-color: #e7edf3;
   border-radius: 3px;
   border: solid 1px #d6dde4;
   font-size: 0.9rem;
+  margin: 0.1em 0.1em;
 }
 
 blockquote {
@@ -48,6 +50,16 @@ iframe {
   width: 100%;
 }
 
+ul, ol {
+  padding-left: 1.3em;
+}
+
+/* 2階層目以降はインデントを小さく */
+li > ul, li > ol {
+  padding-left: 1em;
+}
+
+/* コードブロック */
 .hljs {
-  font-size: 1rem;
+  /* font-size: 1rem; */
 }
