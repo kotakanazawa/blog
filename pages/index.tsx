@@ -15,7 +15,6 @@ type Props = {
 }
 
 export default function Home({ blogs }: Props) {
-  debugger
   return (
     <Layout home>
       <SEO />
