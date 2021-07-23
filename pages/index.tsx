@@ -1,11 +1,20 @@
+import { GetStaticProps } from "next"
 import Link from "next/link"
 import { client } from "../libs/client"
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Date from '../components/date'
 import SEO from '../components/seo'
 
-export default function Home({ blogs }) {
+type Props = {
+  blogs: {
+    id: string
+    title: string
+    createdAt: string
+  }[]
+}
+
+export default function Home({ blogs }: Props) {
   return (
     <Layout home>
       <SEO />
@@ -32,7 +41,7 @@ export default function Home({ blogs }) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" })
   return {
     props: {

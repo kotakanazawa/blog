@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
@@ -7,7 +6,13 @@ import Link from 'next/link'
 const name = 'Kota Kanazawa'
 export const siteTitle = 'Just Do IT'
 
-export default function Layout({ children, home }) {
+export default function Layout({
+  children,
+  home
+}: {
+  children: React.ReactNode
+  home?: boolean
+}) {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
