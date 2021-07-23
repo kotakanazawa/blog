@@ -6,9 +6,20 @@ import utilStyles from '../styles/utils.module.css'
 import cheerio from "cheerio"
 import hljs from "highlight.js"
 import "highlight.js/styles/a11y-dark.css"
+import { GetStaticProps, GetStaticPaths } from 'next'
 
-export default function BlogId({ blog }) {
+export default function BlogId({
+  blog
+}: {
+  blog: {
+    title: string
+    body: string
+    description: string
+    createdAt: string
+  }
+}) {
 
+  // シンタックスハイライト
   const $ = cheerio.load(blog.body)
   $("pre code").each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text())
@@ -38,7 +49,7 @@ export default function BlogId({ blog }) {
   )
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const data = await client.get({ endpoint: "blog" })
   const paths = data.contents.map((content) => `/${content.id}`)
   return {
@@ -47,7 +58,7 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params.id
   const data = await client.get({ endpoint: "blog", contentId: id })
 
